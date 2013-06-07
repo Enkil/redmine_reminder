@@ -3,7 +3,7 @@
 Plugin for Redmine project that sends notification to assignee if due date is coming.
 
 Users can choose on which days before due date they want to be notified.
-Also users can create issues category and choose on which days before due date of issues in this categoru they want to be notified.
+Also users can create issues category and choose on which days before due date of issues in this category they want to be notified.
 
 User setting is located at the user account page.
 ![User settings](https://raw.github.com/Enkil/Redmine_Reminer/master/doc/user_settings.png)
