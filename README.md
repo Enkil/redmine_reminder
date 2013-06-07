@@ -6,14 +6,14 @@ Users can choose on which days before due date they want to be notified.
 Also users can create issues category and choose on which days before due date of issues in this categoru they want to be notified.
 
 User setting is located at the user account page.
-![User settings](https://raw.github.com/Enkil/Redmine_Reminder/redmine-2.x/doc/user_settings.png)
+![User settings](https://raw.github.com/Enkil/Redmine_Reminer/master/doc/user_settings.png)
 
 
 Moreover, administrator can set default notification settings for new users.
-![Default settings](https://raw.github.com/Enkil/Redmine_Reminder/redmine-2.x/doc/default_settings.png)
+![Default settings](https://raw.github.com/Enkil/Redmine_Reminer/master/doc/default_settings.png)
 
 Category settings is located at the category properties page
-![Category Settings] (https://raw.github.com/Enkil/Redmine_Reminder/redmine-2.x/doc/category_settings.jpg)
+![Category Settings] (https://raw.github.com/Enkil/Redmine_Reminer/master/doc/category_settings.jpg)
 
 Plugin also sends info about issues behind a schedule.
 Users cannot change this behavior.
