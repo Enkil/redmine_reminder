@@ -27,7 +27,6 @@ Users cannot change this behavior.
 
     cd /home/user/path_to_you_app/
     git clone git://github.com/Enkil/Redmine_Reminer.git plugins/redmine_reminder
-    cd plugins/redmine_reminder; git checkout <YOUR BRANCH HERE - see above>
 
 For Redmine 2.x and higher
 
