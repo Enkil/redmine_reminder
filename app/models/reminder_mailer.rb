@@ -20,6 +20,12 @@ class ReminderMailer < Mailer
   end
 
   def reminder_notification(user, projects)
+
+    # Only send notifications if the user has requested them or they are
+    # activated by default.
+    if !user.reminder_notification_array.any? then
+      return
+    end
     set_language_if_valid user.language
     puts "User: #{user.name}. Setting for notification: #{user.reminder_notification}"
     puts "Issues:"
@@ -28,6 +34,7 @@ class ReminderMailer < Mailer
     @issues_url = url_for(:controller => 'issues', :action => 'index',
                           :set_filter => 1, :assigned_to_id => user.id,
                           :sort => 'due_date:asc')
+
     mail :to => user.mail, :subject => l(:reminder_mail_subject)
   end
 
