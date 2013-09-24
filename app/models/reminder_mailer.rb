@@ -5,7 +5,7 @@ end
 class ReminderMailer < Mailer
   include Redmine::I18n
 
-  prepend_view_path "#{Redmine::Plugin.find("due_date_reminder").directory}/app/views"
+  prepend_view_path "#{Redmine::Plugin.find("redmine_reminder").directory}/app/views"
 
   def self.due_date_notifications
     unless ActionMailer::Base.perform_deliveries

@@ -43,7 +43,7 @@ You can send notifications manually:
 It is good idea to add the task to cron:
 
     crontab -e
-    0 5 * * * cd /home/user/path_to_you_app && bundle exec rake redmine:reminder_plugin:send_notifications RAILS_ENV=production &> /tmp/redmine_due_date_reminder.log
+    0 5 * * * cd /home/user/path_to_you_app && bundle exec rake redmine:reminder_plugin:send_notifications RAILS_ENV=production &> /tmp/redmine_redmine_reminder.log
 
 Learn more about cron at http://en.wikipedia.org/wiki/Cron
 
