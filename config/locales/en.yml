@@ -1,6 +1,6 @@
 en:
   reminder_default_notification_settings: "Default notification settings"
-  field_reminder_notification: "Remind on these days before due date"
+  field_reminder_notification: "Remind on these number of days before due date"
   error_reminder_notification_input: "Wrong input. You must enter comma separated values."
   reminder_mail_subject: "Reminder: You have issues that are due soon"
   reminder_mail_body: "Issues assigned to you that are due soon"
