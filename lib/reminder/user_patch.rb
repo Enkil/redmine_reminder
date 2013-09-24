@@ -8,7 +8,7 @@ module Reminder
         safe_attributes 'reminder_notification'
 
         def self.valid_reminder_notification?(value)
-          value =~ /^(\A(\d+[\s,]*)+\z)|(\s)$/
+          value =~ /\A\s*(\d+(\s*,\s*\d+)*)?\z/
         end
 
       end
@@ -24,7 +24,7 @@ module Reminder
 
       def reminder_notification
         attr = read_attribute(:reminder_notification)
-        attr ||= Setting.plugin_due_date_reminder['reminder_notification']
+        attr ||= Setting.plugin_redmine_reminder['reminder_notification']
       end
 
     end

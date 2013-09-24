@@ -5,9 +5,9 @@ end
 class ReminderMailer < Mailer
   include Redmine::I18n
 
-  prepend_view_path "#{Redmine::Plugin.find("due_date_reminder").directory}/app/views"
+  prepend_view_path "#{Redmine::Plugin.find("redmine_reminder").directory}/app/views"
 
-  def self.due_date_notifications
+  def self.reminder_notifications
     unless ActionMailer::Base.perform_deliveries
       raise NoMailConfiguration.new(l(:text_email_delivery_not_configured))
     end
@@ -15,11 +15,17 @@ class ReminderMailer < Mailer
     issues = self.find_issues
     issues.each { |issue| self.insert(data, issue) }
     data.each do |user, projects|
-      due_date_notification(user, projects).deliver
+      reminder_notification(user, projects).deliver
     end
   end
 
-  def due_date_notification(user, projects)
+  def reminder_notification(user, projects)
+
+    # Only send notifications if the user has requested them or they are
+    # activated by default.
+    if !user.reminder_notification_array.any? then
+      return
+    end
     set_language_if_valid user.language
     puts "User: #{user.name}. Setting for notification: #{user.reminder_notification}"
     puts "Issues:"
@@ -28,6 +34,7 @@ class ReminderMailer < Mailer
     @issues_url = url_for(:controller => 'issues', :action => 'index',
                           :set_filter => 1, :assigned_to_id => user.id,
                           :sort => 'due_date:asc')
+
     mail :to => user.mail, :subject => l(:reminder_mail_subject)
   end
 

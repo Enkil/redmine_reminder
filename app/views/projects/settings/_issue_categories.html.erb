@@ -3,14 +3,16 @@
   <thead><tr>
     <th><%= l(:label_issue_category) %></th>
     <th><%= l(:field_assigned_to) %></th>
+    <th><%= l(:field_reminder_notification) %></th>
     <th></th>
   </tr></thead>
   <tbody>
 <% for category in @project.issue_categories %>
   <% unless category.new_record? %>
   <tr class="<%= cycle 'odd', 'even' %>">
-    <td><%= category.reminder_notification.present? ? content_tag(:span, h(category.name), { style: "color: green; font-weight: bold;" }) : h(category.name) %></td>
-    <td><%=h(category.assigned_to.name) if category.assigned_to %></td>
+    <td><%= h(category.name) %></td>
+    <td><%= h(category.assigned_to.name) if category.assigned_to %></td>
+    <td><%= content_tag(:span, h(category.reminder_notification.present? ? category.reminder_notification.to_s : '-'), { style: "text-align: center; display:block;" }) %></td>
     <td class="buttons">
       <% if User.current.allowed_to?(:manage_categories, @project) %>
         <%= link_to l(:button_edit), edit_issue_category_path(category), :class => 'icon icon-edit' %>

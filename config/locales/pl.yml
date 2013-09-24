@@ -5,4 +5,5 @@
   reminder_mail_subject: "Reminder: Masz zagadnienia z terminem oddania"
   reminder_mail_body: "Zagadnienia przypisane do Ciebie, dla których upłynął lub niedługo upływa termin oddania"
   reminder_days_overdue: "%{days} dzień(dni) spóźnienia"
+  reminder_view_all_your_issues: "View all your issues"
 
