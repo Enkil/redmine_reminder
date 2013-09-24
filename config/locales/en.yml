@@ -1,9 +1,9 @@
 en:
   reminder_default_notification_settings: "Default notification settings"
-  field_reminder_notification: "Remind about issues on these days"
+  field_reminder_notification: "Remind on these days before due date"
   error_reminder_notification_input: "Wrong input. You must enter comma separated values."
-  reminder_mail_subject: "Reminder: You have issues with due dates"
-  reminder_mail_body: "Issues assigned to you that have due dates"
+  reminder_mail_subject: "Reminder: You have issues that are due soon"
+  reminder_mail_body: "Issues assigned to you that are due soon"
   reminder_days_overdue: "%{days} day(s) overdue"
   reminder_view_all_your_issues: "View all your issues"
 
