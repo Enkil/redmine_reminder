@@ -6,3 +6,4 @@ de:
   reminder_mail_subject: "Erinnerung: Sie haben Tickets mit (bald) fälligem Abgabedatum"
   reminder_mail_body: "Ihnen zugewiesene Tickets mit (bald) fälligem Abgabedatum"
   reminder_days_overdue: "%{days} Tag(e) abgelaufen"
+  reminder_view_all_your_issues: "Alle eigenen Tickets anzeigen"

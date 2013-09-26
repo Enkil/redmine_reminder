@@ -92,14 +92,14 @@ class ReminderMailerTest < ActiveSupport::TestCase
 
       ActionMailer::Base.deliveries.clear
       ActionMailer::Base.perform_deliveries = true
-      ReminderMailer.due_date_notifications
+      ReminderMailer.reminder_notifications
       assert_equal 2, ActionMailer::Base.deliveries.size
     end
 
     should "raise exception if e-mail delivery is not configured" do
       ActionMailer::Base.perform_deliveries = false
       assert_raise NoMailConfiguration do
-        ReminderMailer.due_date_notifications
+        ReminderMailer.reminder_notifications
       end
     end
 
